@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Members | Excellent Gangnam</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#0f0f0f;
+color:white;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+.logo span{
+display:block;
+font-size:11px;
+letter-spacing:2px;
+color:#c8102e;
+margin-top:5px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-size:14px;
+letter-spacing:1px;
+}
+
+.hero{
+padding:80px 60px 40px;
+}
+
+.hero h1{
+font-size:72px;
+line-height:1;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#999;
+font-size:18px;
+}
+
+.search-wrap{
+padding:40px 60px;
+}
+
+.search-box{
+width:100%;
+max-width:600px;
+padding:18px 20px;
+background:#1b1b1b;
+border:none;
+color:white;
+font-size:16px;
+border-radius:10px;
+}
+
+.member-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+gap:30px;
+padding:0 60px 80px;
+}
+
+.member-card{
+background:#1b1b1b;
+border-radius:18px;
+overflow:hidden;
+transition:.3s;
+}
+
+.member-card:hover{
+transform:translateY(-5px);
+}
+
+.member-photo{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.member-content{
+padding:25px;
+}
+
+.company{
+font-size:22px;
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.name{
+font-size:16px;
+color:#d0d0d0;
+margin-bottom:15px;
+}
+
+.specialty{
+font-size:14px;
+color:#888;
+line-height:1.6;
+}
+
+.role{
+display:inline-block;
+padding:5px 10px;
+background:#c8102e;
+border-radius:20px;
+font-size:12px;
+margin-bottom:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="nav">
+
+<div class="logo">
+EXCELLENT GANGNAM
+<span>POWERED BY BNI</span>
+</div>
+
+<div class="menu">
+<a href="index.html">HOME</a>
+<a href="members.html">MEMBERS</a>
+<a href="#">VISITOR</a>
+<a href="#">POWER TEAMS</a>
+<a href="#">LOCATION</a>
+</div>
+
+</div>
+
+<div class="hero">
+<h1>Members</h1>
+<p>Excellent Gangnam Business Directory</p>
+</div>
+
+<div class="search-wrap">
+<input
+class="search-box"
+type="text"
+placeholder="이름, 회사명, 전문분야 검색">
+</div>
+
+<div class="member-grid">
+
+<div class="member-card">
+
+<img class="member-photo"
+src="Shineunji.jpg">
+
+<div class="member-content">
+
+<div class="role">ST</div>
+
+<div class="company">
+TOTAL PLUS
+</div>
+
+<div class="name">
+신은지 대표
+</div>
+
+<div class="specialty">
+조명 유통
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
