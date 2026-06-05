@@ -3,200 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Members | Excellent Gangnam</title>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,'Pretendard',sans-serif;background:#0f0f0f;color:#fff}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:28px 60px;border-bottom:1px solid rgba(255,255,255,.1)}
+.logo{font-size:28px;font-weight:800;letter-spacing:-1px}
+.logo small{display:block;color:#d71920;font-size:11px;letter-spacing:3px;margin-top:6px}
+.menu a{color:#fff;text-decoration:none;margin-left:32px;font-size:14px;font-weight:700}
+.menu a:hover{color:#d71920}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+.hero{padding:90px 60px 45px}
+.hero h1{font-size:76px;letter-spacing:-3px}
+.hero p{margin-top:18px;color:#aaa;font-size:18px}
+
+.tools{padding:0 60px 45px}
+.search{width:100%;max-width:620px;padding:19px 22px;background:#1c1c1c;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#fff;font-size:16px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.filter{padding:10px 16px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#ddd;background:transparent;cursor:pointer}
+.filter.active,.filter:hover{background:#d71920;border-color:#d71920;color:white}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:30px;padding:0 60px 90px}
+.card{background:#191919;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08);transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:rgba(215,25,32,.6)}
+.photo{width:100%;height:340px;object-fit:cover;display:block}
+.content{padding:24px}
+.role{display:inline-block;background:#d71920;color:#fff;font-size:11px;font-weight:800;padding:6px 10px;border-radius:999px;margin-bottom:14px}
+.name{font-size:24px;font-weight:800;margin-bottom:8px}
+.company{font-size:15px;color:#ccc;margin-bottom:16px}
+.category{font-size:13px;color:#d71920;font-weight:700;margin-bottom:8px}
+.specialty{font-size:15px;color:#aaa;line-height:1.55;min-height:45px}
+.website{display:inline-block;margin-top:22px;color:#fff;text-decoration:none;border-bottom:1px solid #d71920;padding-bottom:5px;font-size:13px;font-weight:700}
+.empty{padding:40px 60px;color:#999;display:none}
+
+@media(max-width:768px){
+.nav{padding:22px 24px;display:block}
+.menu{margin-top:20px}
+.menu a{display:inline-block;margin:0 18px 10px 0}
+.hero{padding:60px 24px 35px}
+.hero h1{font-size:54px}
+.tools{padding:0 24px 35px}
+.grid{padding:0 24px 70px;grid-template-columns:1fr}
 }
-
-body{
-font-family:Arial,sans-serif;
-background:#0f0f0f;
-color:white;
-}
-
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 60px;
-border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-}
-
-.logo span{
-display:block;
-font-size:11px;
-letter-spacing:2px;
-color:#c8102e;
-margin-top:5px;
-}
-
-.menu a{
-color:white;
-text-decoration:none;
-margin-left:30px;
-font-size:14px;
-letter-spacing:1px;
-}
-
-.hero{
-padding:80px 60px 40px;
-}
-
-.hero h1{
-font-size:72px;
-line-height:1;
-margin-bottom:20px;
-}
-
-.hero p{
-color:#999;
-font-size:18px;
-}
-
-.search-wrap{
-padding:40px 60px;
-}
-
-.search-box{
-width:100%;
-max-width:600px;
-padding:18px 20px;
-background:#1b1b1b;
-border:none;
-color:white;
-font-size:16px;
-border-radius:10px;
-}
-
-.member-grid{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-gap:30px;
-padding:0 60px 80px;
-}
-
-.member-card{
-background:#1b1b1b;
-border-radius:18px;
-overflow:hidden;
-transition:.3s;
-}
-
-.member-card:hover{
-transform:translateY(-5px);
-}
-
-.member-photo{
-width:100%;
-height:320px;
-object-fit:cover;
-}
-
-.member-content{
-padding:25px;
-}
-
-.company{
-font-size:22px;
-font-weight:bold;
-margin-bottom:8px;
-}
-
-.name{
-font-size:16px;
-color:#d0d0d0;
-margin-bottom:15px;
-}
-
-.specialty{
-font-size:14px;
-color:#888;
-line-height:1.6;
-}
-
-.role{
-display:inline-block;
-padding:5px 10px;
-background:#c8102e;
-border-radius:20px;
-font-size:12px;
-margin-bottom:15px;
-}
-
 </style>
-
 </head>
 
 <body>
 
-<div class="nav">
+<header class="nav">
+  <div class="logo">
+    EXCELLENT GANGNAM
+    <small>POWERED BY BNI</small>
+  </div>
+  <nav class="menu">
+    <a href="index.html">HOME</a>
+    <a href="members.html">MEMBERS</a>
+    <a href="#">VISITOR</a>
+    <a href="#">POWER TEAMS</a>
+    <a href="#">LOCATION</a>
+  </nav>
+</header>
 
-<div class="logo">
-EXCELLENT GANGNAM
-<span>POWERED BY BNI</span>
-</div>
+<section class="hero">
+  <h1>Members</h1>
+  <p>Excellent Gangnam Business Directory</p>
+</section>
 
-<div class="menu">
-<a href="index.html">HOME</a>
-<a href="members.html">MEMBERS</a>
-<a href="#">VISITOR</a>
-<a href="#">POWER TEAMS</a>
-<a href="#">LOCATION</a>
-</div>
+<section class="tools">
+  <input class="search" id="searchInput" placeholder="이름, 회사명, 업종, 전문분야 검색">
+  <div class="filters" id="filters"></div>
+</section>
 
-</div>
+<section class="grid" id="memberGrid"></section>
+<div class="empty" id="emptyMessage">검색 결과가 없습니다.</div>
 
-<div class="hero">
-<h1>Members</h1>
-<p>Excellent Gangnam Business Directory</p>
-</div>
+<script>
+const members = [
+{name:"이찬성",company:"찬성엠피알",category:"언론홍보, 퍼스널브랜딩",specialty:"홍보",website:"",photo:"Leechansung.png",role:"121댄스마스터",order:1,status:"Active"},
+{name:"최종완",company:"세경디자인㈜",category:"오피스인테리어",specialty:"오피스인테리어",website:"",photo:"Choijongwan.jpg",role:"",order:2,status:"Active"},
+{name:"나창균",company:"㈜하이파이브인터내셔널",category:"러닝용품",specialty:"GPS스마트기기 판매",website:"",photo:"Nachanggyun.jpg",role:"",order:3,status:"Active"},
+{name:"박종휘",company:"미래에셋",category:"개인,사업주,법인보험",specialty:"생명보험",website:"",photo:"Parkjonghui.png",role:"",order:4,status:"Active"},
+{name:"장우빈",company:"리맥스 플래티넘 파트너스",category:"상업용 부동산중개(빌딩,토지,공장)",specialty:"부동산 중개",website:"",photo:"Changwoobin.jpg",role:"비호코디",order:5,status:"Active"},
+{name:"권영만",company:"원스톱플라워",category:"화환.꽃바구니.개업화분.난",specialty:"전국꽃배달서비스",website:"https://onestopflower.co.kr/",photo:"Kwonyoungman.jpg",role:"",order:6,status:"Active"},
+{name:"김기열",company:"㈜밀리미터제이케이",category:"프렌차이즈 전문 인테리어(카페,커피숍 제외)",specialty:"인테리어",website:"https://www.instagram.com/millimeter_official_/",photo:"Kimkiyeol.jpg",role:"출석위원",order:7,status:"Active"},
+{name:"김형석",company:"브로드카",category:"생애첫차 구매",specialty:"국산 중고차 판매입/생애첫차구매",website:"",photo:"Kimhyungseok.jpg",role:"",order:8,status:"Active"},
+{name:"김보미",company:"강남그랜드안과",category:"라식,라섹,백내장,황반변성",specialty:"안과/안종합검진",website:"",photo:"Kimbomi.jpg",role:"갱신위원",order:9,status:"Active"},
+{name:"안찬민",company:"새하마노디자인㈜",category:"주거인테리어",specialty:"인테리어",website:"https://blog.naver.com/01_saehamano",photo:"Anchanmin.jpg",role:"성장코디",order:10,status:"Active"},
+{name:"신은지",company:"㈜토탈플러스",category:"무대조명기기 유통/설치/렌탈",specialty:"조명 유통",website:"https://www.total-plus.co.kr",photo:"Shineunji.jpg",role:"ST",order:11,status:"Active"},
+{name:"박정은",company:"로그코스메틱",category:"국내 기초화장품 유통 및 판매",specialty:"화장품",website:"",photo:"Parkjungeun.png",role:"",order:12,status:"Active"},
+{name:"송용혁",company:"(주)경호온라인다이렉트자동차보험",category:"온라인-다이렉트자동차보험",specialty:"자동차보험",website:"",photo:"Songyonghyuk.png",role:"",order:13,status:"Active"},
+{name:"이은향",company:"스테어케이스디자인",category:"소규모인테리어(카페, 바 등)",specialty:"소규모인테리어",website:"",photo:"Leeeunhyang.jpg",role:"",order:14,status:"Active"},
+{name:"박범균",company:"주식회사 쏠리드컴",category:"컴퓨터/복합기 판매&렌탈",specialty:"사무기기",website:"https://solidcom.kr/",photo:"Parkbeomgyun.png",role:"",order:15,status:"Active"},
+{name:"신종협",company:"토탈리빙 위너스 MNS(주)",category:"친환경 업소용 음식물처리기",specialty:"친환경 업소용 음식물 처리",website:"https://www.zerostone.co.kr/",photo:"Shinjonghyup.jpg",role:"",order:16,status:"Active"}
+];
 
-<div class="search-wrap">
-<input
-class="search-box"
-type="text"
-placeholder="이름, 회사명, 전문분야 검색">
-</div>
+let currentFilter = "ALL";
 
-<div class="member-grid">
+const grid = document.getElementById("memberGrid");
+const searchInput = document.getElementById("searchInput");
+const filters = document.getElementById("filters");
+const emptyMessage = document.getElementById("emptyMessage");
 
-<div class="member-card">
+function renderFilters(){
+  const categories = ["ALL", ...new Set(members.filter(m=>m.status==="Active").map(m=>m.specialty))];
+  filters.innerHTML = categories.map(cat =>
+    `<button class="filter ${cat==="ALL"?"active":""}" onclick="setFilter('${cat}')">${cat}</button>`
+  ).join("");
+}
 
-<img class="member-photo"
-src="Shineunji.jpg">
+function setFilter(cat){
+  currentFilter = cat;
+  document.querySelectorAll(".filter").forEach(btn=>btn.classList.remove("active"));
+  [...document.querySelectorAll(".filter")].find(btn=>btn.textContent===cat).classList.add("active");
+  renderMembers();
+}
 
-<div class="member-content">
+function renderMembers(){
+  const q = searchInput.value.toLowerCase().trim();
 
-<div class="role">ST</div>
+  const filtered = members
+    .filter(m => m.status === "Active")
+    .sort((a,b)=>a.order-b.order)
+    .filter(m => currentFilter === "ALL" || m.specialty === currentFilter)
+    .filter(m => {
+      const text = `${m.name} ${m.company} ${m.category} ${m.specialty} ${m.role}`.toLowerCase();
+      return text.includes(q);
+    });
 
-<div class="company">
-TOTAL PLUS
-</div>
+  grid.innerHTML = filtered.map(m => `
+    <article class="card">
+      <img class="photo" src="${m.photo}" alt="${m.name}">
+      <div class="content">
+        ${m.role ? `<div class="role">${m.role}</div>` : ""}
+        <div class="name">${m.name}</div>
+        <div class="company">${m.company}</div>
+        <div class="category">${m.category}</div>
+        <div class="specialty">${m.specialty}</div>
+        ${m.website ? `<a class="website" href="${m.website}" target="_blank">VISIT WEBSITE →</a>` : ""}
+      </div>
+    </article>
+  `).join("");
 
-<div class="name">
-신은지 대표
-</div>
+  emptyMessage.style.display = filtered.length ? "none" : "block";
+}
 
-<div class="specialty">
-조명 유통
-</div>
+searchInput.addEventListener("input", renderMembers);
 
-</div>
-
-</div>
-
-</div>
+renderFilters();
+renderMembers();
+</script>
 
 </body>
 </html>
