@@ -6,157 +6,320 @@
 <title>Excellent Gangnam</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family: Arial, sans-serif;
-    color:#111;
-    background:#fff;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,'Pretendard',sans-serif;background:#0f0f0f;color:#fff}
+a{text-decoration:none;color:inherit}
 
 .hero{
-    height:100vh;
-    background:#111;
-    color:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:80px;
+min-height:100vh;
+background:
+linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.62) 45%,rgba(0,0,0,.35) 100%),
+linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.85) 100%),
+url('hero.jpg') center/cover no-repeat;
+position:relative;
+padding:34px 60px 70px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
 }
 
 .logo{
-    position:absolute;
-    top:40px;
-    left:40px;
-    font-size:28px;
-    font-weight:bold;
+font-size:30px;
+font-weight:900;
+line-height:.95;
+letter-spacing:-1px;
+}
+
+.logo small{
+display:block;
+color:#d71920;
+font-size:11px;
+letter-spacing:3px;
+margin-top:12px;
+}
+
+.menu{
+display:flex;
+gap:36px;
+align-items:center;
+font-size:14px;
+font-weight:800;
+letter-spacing:.5px;
+}
+
+.menu a:hover{color:#d71920}
+
+.hero-content{
+max-width:780px;
+margin-top:120px;
 }
 
 .hero h1{
-    font-size:90px;
-    line-height:0.95;
-    margin-bottom:30px;
+font-size:112px;
+line-height:.92;
+letter-spacing:-5px;
+margin-bottom:34px;
 }
 
 .hero p{
-    font-size:22px;
-    max-width:700px;
-    line-height:1.6;
+font-size:22px;
+line-height:1.65;
+font-weight:700;
+max-width:760px;
 }
 
-.stats{
-    display:flex;
-    justify-content:space-around;
-    padding:120px 50px;
+.hero .powered{
+color:#d71920;
+font-size:17px;
+margin-top:22px;
+font-weight:500;
 }
 
-.stat h2{
-    font-size:90px;
-    margin-bottom:10px;
+.hero .powered strong{
+font-weight:900;
+letter-spacing:.5px;
 }
 
-.stat p{
-    font-size:20px;
+.hero-bottom{
+display:grid;
+grid-template-columns:1fr 1fr 1.2fr;
+gap:30px;
+border-top:1px solid rgba(255,255,255,.18);
+padding-top:35px;
+}
+
+.stat{
+border-right:1px solid rgba(255,255,255,.22);
+padding-right:30px;
+}
+
+.stat:last-child{border-right:none}
+
+.stat strong{
+font-size:70px;
+line-height:1;
+display:block;
+letter-spacing:-2px;
+}
+
+.stat span{
+display:block;
+margin-top:10px;
+font-size:18px;
+color:#ddd;
 }
 
 .section{
-    padding:120px 80px;
+padding:110px 60px;
+background:#fff;
+color:#111;
+}
+
+.section.black{
+background:#0f0f0f;
+color:#fff;
+}
+
+.section-label{
+font-size:13px;
+font-weight:900;
+letter-spacing:1px;
+color:#d71920;
+margin-bottom:26px;
 }
 
 .section h2{
-    font-size:48px;
-    margin-bottom:30px;
+font-size:56px;
+line-height:1.15;
+letter-spacing:-2px;
+max-width:850px;
 }
 
 .section p{
-    font-size:20px;
-    line-height:1.8;
-    max-width:900px;
+margin-top:28px;
+font-size:20px;
+line-height:1.8;
+max-width:900px;
+color:#555;
+}
+
+.section.black p{color:#aaa}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-top:50px;
+}
+
+.card{
+border:1px solid rgba(255,255,255,.12);
+padding:34px;
+min-height:220px;
+background:#181818;
+}
+
+.card h3{
+font-size:28px;
+margin-bottom:18px;
+}
+
+.card p{
+font-size:16px;
+margin:0;
+color:#aaa;
+}
+
+.cta{
+display:inline-block;
+margin-top:40px;
+padding:18px 28px;
+border:1px solid #111;
+font-weight:900;
+letter-spacing:.5px;
+}
+
+.black .cta{
+border-color:#fff;
+}
+
+.cta:hover{
+background:#d71920;
+border-color:#d71920;
+color:#fff;
 }
 
 .footer{
-    background:#111;
-    color:white;
-    padding:60px;
+padding:48px 60px;
+background:#050505;
+border-top:1px solid rgba(255,255,255,.1);
+display:flex;
+justify-content:space-between;
+gap:30px;
+color:#888;
+font-size:13px;
 }
 
-.footer h3{
-    font-size:32px;
+.footer strong{
+color:#fff;
+font-size:24px;
+display:block;
+margin-bottom:10px;
 }
 
+@media(max-width:900px){
+.hero{padding:28px 24px 46px}
+.nav{display:block}
+.menu{margin-top:26px;gap:18px;flex-wrap:wrap}
+.hero h1{font-size:68px}
+.hero p{font-size:18px}
+.hero-bottom{grid-template-columns:1fr;gap:22px}
+.stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:20px}
+.cards{grid-template-columns:1fr}
+.section{padding:80px 24px}
+.section h2{font-size:42px}
+.footer{display:block;padding:40px 24px}
+}
 </style>
-
 </head>
 
 <body>
 
-<div class="hero">
+<main class="hero">
 
-<div class="logo">
-EXCELLENT<br>
-GANGNAM
-</div>
+  <header class="nav">
+    <a href="index.html" class="logo">
+      EXCELLENT<br>GANGNAM
+      <small>POWERED BY BNI</small>
+    </a>
 
-<h1>
-Connect.<br>
-Trust.<br>
-Grow.
-</h1>
+    <nav class="menu">
+      <a href="index.html">HOME</a>
+      <a href="members.html">MEMBERS</a>
+      <a href="#">VISITOR</a>
+      <a href="#">POWER TEAMS</a>
+      <a href="#">LOCATION</a>
+    </nav>
+  </header>
 
-<p>
-강남을 중심으로 활동하는 사업가들이
-신뢰를 기반으로 연결되고
-함께 성장하는 비즈니스 네트워크
-</p>
+  <section class="hero-content">
+    <h1>Connect.<br>Trust.<br>Grow.</h1>
 
-</div>
+    <p>
+      강남을 중심으로 활동하는 사업가들이<br>
+      신뢰를 기반으로 연결되고 함께 성장하는 비즈니스 네트워크
+    </p>
 
-<div class="stats">
+    <div class="powered">powered by <strong>BNI</strong></div>
+  </section>
 
-<div class="stat">
-<h2>72+</h2>
-<p>Business Leaders</p>
-</div>
+  <section class="hero-bottom">
+    <div class="stat">
+      <strong>72+</strong>
+      <span>Business Leaders</span>
+    </div>
 
-<div class="stat">
-<h2>16+</h2>
-<p>Industries</p>
-</div>
+    <div class="stat">
+      <strong>16+</strong>
+      <span>Industries</span>
+    </div>
 
-<div class="stat">
-<h2>Every</h2>
-<p>Wednesday</p>
-</div>
+    <div class="stat">
+      <strong>Every Wednesday</strong>
+      <span>Connected by Trust</span>
+    </div>
+  </section>
 
-</div>
+</main>
 
-<div class="section">
+<section class="section">
+  <div class="section-label">WHO WE ARE</div>
+  <h2>신뢰를 기반으로 비즈니스의 가능성을 연결합니다.</h2>
+  <p>
+    Excellent Gangnam은 다양한 분야의 사업가들이 모여 서로의 성장을 돕는 비즈니스 네트워크입니다.
+    우리는 단순한 만남을 넘어, 장기적인 관계와 실질적인 협업의 기회를 만들어갑니다.
+  </p>
+  <a class="cta" href="members.html">VIEW MEMBERS →</a>
+</section>
 
-<h2>Who We Are</h2>
+<section class="section black">
+  <div class="section-label">WHAT WE DO</div>
+  <h2>각자의 전문성이 연결될 때, 더 큰 비즈니스가 만들어집니다.</h2>
 
-<p>
-Excellent Gangnam은 다양한 분야의 사업가들이
-신뢰와 추천을 기반으로 성장하는 비즈니스 네트워크입니다.
-우리는 단순한 명함 교환이 아닌,
-장기적인 관계와 실질적인 비즈니스 성과를 만들어갑니다.
-</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Connect</h3>
+      <p>다양한 업종의 대표들이 신뢰를 기반으로 연결됩니다.</p>
+    </div>
 
-</div>
+    <div class="card">
+      <h3>Trust</h3>
+      <p>관계의 깊이를 바탕으로 추천과 협업이 이루어집니다.</p>
+    </div>
 
-<div class="footer">
+    <div class="card">
+      <h3>Grow</h3>
+      <p>함께 성장하는 구조를 통해 지속 가능한 비즈니스 성과를 만듭니다.</p>
+    </div>
+  </div>
+</section>
 
-<h3>EXCELLENT GANGNAM</h3>
+<footer class="footer">
+  <div>
+    <strong>EXCELLENT GANGNAM</strong>
+    Connect. Trust. Grow.
+  </div>
 
-<p style="margin-top:20px;">
-Connect. Trust. Grow.
-</p>
-
-</div>
+  <div>
+    Official Chapter of BNI Korea
+  </div>
+</footer>
 
 </body>
 </html>
